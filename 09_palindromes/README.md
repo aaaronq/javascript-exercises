@@ -14,6 +14,9 @@ A palindrome is a string that is spelled the same both forwards and backwards, u
 ```javascript
 palindromes('racecar') // true
 palindromes('tacos') // false
+
+/////////                                                     //////
+/////////split string remove whitespace compare array.reverse //////
 ```
 
 

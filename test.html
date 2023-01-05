@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    test js console
+</body>
+<script>
+
+const findTheOldest = function(array) {
+    return array.reduce((oldest, currentPerson) => {
+        const oldestAge = getAge(oldest.yearOfBirth, oldest.yearOfDeath);
+        const currentAge = getAge(currentPerson.yearOfBirth, currentPerson.yearOfDeath);
+        //console.log(`${currentAge} > ${oldestAge} = ${currentAge > oldestAge}`)
+        return currentAge > oldestAge ? currentPerson : oldest;
+    });
+}
+
+const getAge = function(birth, death) {
+    //console.log(`born ${birth} died ${death}`);
+    if (!death) return (new Date().getFullYear()) - birth;
+    return death - birth;
+}
+
+</script>
+</html>
